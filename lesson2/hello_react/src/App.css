@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.myHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header-component {
+  background-color: white;
+  width: 80%;
+  font-size: 1.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.myItem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: white;
+  width: calc(80%/3);
+  margin: 5px;
+  height: 400px;
+}
+
+.itemBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+}
