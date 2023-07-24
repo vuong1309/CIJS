@@ -7,7 +7,7 @@ import Modal from './components/Modal.js';
 import { useState } from 'react';
 
 function App() {
-  const [openModal, setOpenModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <div className='myApp'>
@@ -19,20 +19,20 @@ function App() {
 
         <div className='myItem'>
           <Item onClick={() => {
-            setOpenModal(true);
+            setModalOpen(true);
           }}>
           </Item>
           <Item onClick={() => {
-            setOpenModal(true);
+            setModalOpen(true);
           }}>
           </Item>
           <Item onClick={() => {
-            setOpenModal(true);
+            setModalOpen(true);
           }}>
           </Item>
         </div>
 
-        {openModal && <Modal closeModal={setOpenModal} />}
+        {modalOpen && <Modal closeModal={setModalOpen} />}
       </div>
     </>
   );
