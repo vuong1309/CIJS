@@ -1,0 +1,44 @@
+.myItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.item-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: white;
+    width: calc(80%/3);
+    margin: 20px;
+    height: 500px;
+}
+
+.itemBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.myButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myButton-buy,
+.myButton-getfree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.myButton-getfree {
+    background-color: red;
+}

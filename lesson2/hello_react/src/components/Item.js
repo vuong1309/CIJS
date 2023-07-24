@@ -1,14 +1,28 @@
 import React from 'react';
-import Button from './Button.js';
+import './Item.css';
 
-const Item = () => {
+
+function Item(props) {
+    const { onClick } = props;
     return (
-        <div className='item-component'>
-            <div className='itemBtn'>
-                <Button></Button>
-                <Button></Button>
-            </div>
-        </div>
+        <>
+            <div className='item-component'>
+                <div className='itemBtn'>
+                    <div className='myButton'>
+                        <div
+                            className='myButton-buy'
+                            onClick={onClick}>
+                            Buy ticket
+                        </div>
+                        <div className='myButton-getfree'>
+                            Get free
+                        </div>
+                    </div >
+                </div>
+            </div >
+
+        </>
+
     );
 };
 

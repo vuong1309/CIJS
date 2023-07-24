@@ -1,0 +1,15 @@
+.myHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-component {
+    background-color: white;
+    width: 80%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray;
+}
