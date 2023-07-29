@@ -9,10 +9,15 @@ const Popup = ({ closePopup }) => {
         const value = event.target.value;
         setInit({ ...init, [name]: value })
     }
+
+    const closeBtnPay = () => closePopup(false);
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(`Đã đăng ký ${init.ticketNumber} vé, tin nhắn sẽ được gửi tới ${init.email}`);
+        closeBtnPay();
     }
+
     return (
         <>
             <div className='popup'>
@@ -26,10 +31,10 @@ const Popup = ({ closePopup }) => {
                         <input type="text" name="ticketNumber" value={init.ticketNumber} onChange={handleEvent} placeholder='Enter number you want' /><br />
                         <label>Send to</label><br />
                         <input type="text" name="email" value={init.email} onChange={handleEvent} placeholder='Enter your email' /><br /><br />
-                        <button type="submit">PAY</button>
+                        <button type="submit"> PAY </button>
                     </form>
                 </div>
-            </div>
+            </div >
         </>
     );
 };
