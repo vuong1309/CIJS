@@ -17,13 +17,15 @@ const Popup = ({ closePopup }) => {
         <>
             <div className='popup'>
                 <div className='popup-inner'>
-                    <h2>Ticket</h2>
-                    <div className="close-btn" onClick={() => closePopup(false)}> X </div>
+                    <div className='popup-header'>
+                        <h2>Ticket</h2>
+                    </div>
+                    <div className="close-btn" onClick={() => closePopup(false)}> &times; </div>
                     <form method='post' onSubmit={handleSubmit}>
                         <label>Tickets, $3 per one</label><br />
-                        <input type="text" name="ticketNumber" value={init.ticketNumber} onChange={handleEvent} /><br />
+                        <input type="text" name="ticketNumber" value={init.ticketNumber} onChange={handleEvent} placeholder='Enter number you want' /><br />
                         <label>Send to</label><br />
-                        <input type="text" name="email" value={init.email} onChange={handleEvent} /><br /><br />
+                        <input type="text" name="email" value={init.email} onChange={handleEvent} placeholder='Enter your email' /><br /><br />
                         <button type="submit">PAY</button>
                     </form>
                 </div>
