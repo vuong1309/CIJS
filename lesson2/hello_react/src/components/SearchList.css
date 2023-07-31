@@ -1,0 +1,19 @@
+.searchlist-container {
+    width: 100%;
+    background-color: gray;
+    color: black;
+    padding: 20px;
+}
+
+.product-item {
+    margin: 10px 0px;
+}
+
+.product-search {
+    width: 450px;
+    border: 0;
+    outline: none;
+    color: #8b7d77;
+    border-radius: 5px;
+    padding: 8px;
+}
