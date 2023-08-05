@@ -1,0 +1,26 @@
+.chart-wrapper {
+    width: 100%;
+    min-height: 400px;
+    background-color: #e1cae4;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.chart-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.line-vertical-wrapper {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    height: 150px;
+}
