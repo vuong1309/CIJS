@@ -142,7 +142,7 @@ function App() {
   return (
     <>
       <textarea cols={20} rows={4} value={init} onChange={(e) => setInit(e.target.value)} />
-      <p> Word(s): {wordCount.split(" ").length}</p>
+      <p> Word (s) : {wordCount.split(' ').length - 1}</p>
     </>
   )
 }
