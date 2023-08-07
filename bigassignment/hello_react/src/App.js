@@ -12,6 +12,12 @@ import { useState } from 'react';
 const App = () => {
 
   const [addExpenseForm, setAddExpenseForm] = useState(false);
+  const addItemFromApp = (ExpenseItem) => {
+    data.push(ExpenseItem);
+  }
+
+
+
   return (
     <>
       <Container className="app-container">
@@ -22,7 +28,7 @@ const App = () => {
             ADD NEW EXPENSE
           </Button>
         </div>
-        {addExpenseForm && <AddExpense closeAddExpenseForm={setAddExpenseForm} />}
+        {addExpenseForm && <AddExpense closeAddExpenseForm={setAddExpenseForm} addItemFromApp={addItemFromApp} />}
         <Filter />
         <Chart />
         <ExpensesList data={data} />
