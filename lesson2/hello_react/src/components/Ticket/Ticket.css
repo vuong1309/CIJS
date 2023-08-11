@@ -1,0 +1,48 @@
+.ticket-wrapper {
+    background-color: white;
+    width: 80%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.ticket-item {
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid gray;
+}
+
+.ticket-month {
+    display: flex;
+    gap: 30px;
+}
+
+.ticket-month p {
+    width: 150px;
+}
+
+.ticket-month span {
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.ticket-number {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
