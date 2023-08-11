@@ -1,0 +1,14 @@
+.my-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c4c4c4;
+}
+
+.my-footer select {
+    width: 50px;
+}
