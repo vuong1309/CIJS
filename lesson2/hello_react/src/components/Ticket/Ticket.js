@@ -29,7 +29,7 @@ const Ticket = () => {
                 return (
                     <div className='ticket-item' key={item.id}>
                         <div className='ticket-month'>
-                            <p>{item.name}</p>
+                            <div>{item.name}</div>
                             {item.isSoldOut && <span className='item-isSoldOut'>Sold Out</span>}
                         </div>
                         {item.ticketRemain !== 0 ? <div className='ticket-number'>{item.ticketRemain}</div> : undefined}

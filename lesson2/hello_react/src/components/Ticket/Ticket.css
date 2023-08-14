@@ -20,10 +20,11 @@
 
 .ticket-month {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
-.ticket-month p {
+.ticket-month div {
     width: 150px;
 }
 

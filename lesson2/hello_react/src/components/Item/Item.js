@@ -3,6 +3,8 @@ import './Item.css';
 import ImgHN from '../../images/ha-noi.jpg'
 import ImgHCM from '../../images/ho-chi-minh.jpg'
 import ImgDN from '../../images/da-nang.jpg'
+import { useContext } from 'react';
+import { TicketContext } from '../../TicketContext.js';
 
 
 function Item() {
@@ -31,11 +33,13 @@ function Item() {
         },
     ];
 
+    const { showPopup, setShowPopup, handlePopup } = useContext(TicketContext);
+
     return (
         <div className='item-wrapper'>
             {addressInfo.map(item => {
                 return (
-                    <div className='item'>
+                    <div className='item' key={item.id}>
                         <img className='item-img'
                             src={item.image}
                             alt=""
@@ -46,7 +50,7 @@ function Item() {
                             <p>{item.description}</p>
                         </div>
                         <div className='item-button'>
-                            <button className='btn-buy'>Buy Ticket</button>
+                            <button className='btn-buy' onClick={() => handlePopup(true)}>Buy Ticket</button>
                             <button className='btn-getfree'>Get Free</button>
                         </div>
                     </div>

@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import './Popup.css';
+import { useContext } from 'react';
+import { TicketContext } from '../../TicketContext.js';
 
-const Popup = ({ closePopup }) => {
+const Popup = () => {
 
-    const [init, setInit] = useState({ ticketNumber: "", email: "" });
-    const handleEvent = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInit({ ...init, [name]: value })
+    const { showPopup, handlePopup, ticketInfo, setTicketInfo, countTicket, setCountTicket, loading, setLoading } = useContext(TicketContext);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setTicketInfo({ ...ticketInfo, [name]: value });
+        console.log('check ticket num, email:', e.target.value);
     }
 
-    const closeBtnPay = () => closePopup(false);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handlePopup(false);
+    }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(`Đã đăng ký ${init.ticketNumber} vé, tin nhắn sẽ được gửi tới ${init.email}`);
-        closeBtnPay();
+    if (!showPopup) {
+        return undefined;
     }
 
     return (
@@ -25,12 +29,26 @@ const Popup = ({ closePopup }) => {
                     <div className='popup-header'>
                         <h2>Ticket</h2>
                     </div>
-                    <div className="close-btn" onClick={() => closePopup(false)}> &times; </div>
-                    <form method='post' onSubmit={handleSubmit}>
+                    <div className="close-btn" onClick={() => handlePopup(false)}>
+                        &times; </div>
+                    <form onSubmit={handleSubmit}>
                         <label>Tickets, $3 per one</label><br />
-                        <input type="text" name="ticketNumber" value={init.ticketNumber} onChange={handleEvent} placeholder='Enter number you want' /><br />
-                        <label>Send to</label><br />
-                        <input type="text" name="email" value={init.email} onChange={handleEvent} placeholder='Enter your email' /><br /><br />
+                        <input
+                            type="text"
+                            name="number"
+                            value={ticketInfo.number}
+                            onChange={handleChange}
+                            placeholder='Enter number you want' />
+                        <br />
+                        <label>Send to</label>
+                        <br />
+                        <input
+                            type="text"
+                            name="email"
+                            value={ticketInfo.email}
+                            onChange={handleChange}
+                            placeholder='Enter your email' />
+                        <br /><br />
                         <button type="submit"> PAY </button>
                     </form>
                 </div>
